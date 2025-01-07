@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+.statsbg {
+  background: #070A0F url('./assets/images/world_mapbg.png') no-repeat top center;
+  background-size: cover;
+}
+
+.worldmapicons {
+  background: url('./assets/images/worldmapicon.png') no-repeat top center;
+  background-size: contain;
+}
+
+.servicebg {
+  background: url('./assets/images/servicesbg.png') no-repeat top center;
+  height: 100vh;
+}
+
+.info-wrap .listingimg {
+  width: 100% !important;
+  height: 400px !important;
+}
+
+#affordtext {
+  background-color: #fff;
+  padding: 10px;
+}
+
+@media (max-width:600px) {
+  .arrow-fix {
+    position: absolute;
+    left: 55%;
+  }
+
+  #border-fix {
+    border: 0 !important;
+  }
+
+  .listingbtn,
+  .group-btn {
+    width: 100%;
+  }
+
+  #groupBorder {
+    border: 0 !important;
+  }
+
+  #listingimg {
+    width: 300px;
+    height: 300px;
+  }
+
+  .service-fix {
+    position: absolute;
+    top: 0% !important;
+    left: 0 !important;
+  }
+
+  #servicecard-fix {
+    position: absolute;
+    top: 0% !important;
+    left: 0 !important;
+  }
+
+  .servicebg {
+    background: unset;
+  }
+
+  #affordtext h2 {
+    font-size: 18px;
+  }
+
+  #affordtext {
+    background-color: #fff;
+    padding: 10px;
+  }
+
+  #landscape-fix {
+    position: unset !important;
+  }
+}
