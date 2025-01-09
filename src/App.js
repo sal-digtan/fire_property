@@ -13,23 +13,51 @@ import ShortLet from './components/ShortLet';
 import InvestmentLandscape from './components/InvestmentLandscape';
 import Maximize from './components/Maximize';
 import Footer from './components/Footer'
+import AboutPage from './components/AboutPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Features from './components/Features';
+import Journey from './components/Journey';
+import Connect from './components/Connect';
+import Team from './components/Team';
+import PartFireGroup from './components/PartFireGroup';
+import FAQ from './components/FAQ';
 
 function App() {
+
   return (
     <div>
-      <NavBarComp />
-      <HomeBanner />
-      <MultiplyInvestments />
-      <SearchBox />
-      <WorldMap />
-      <AwardWinning />
-      <GroupLisitng />
-      <AffordableCities />
-      <Services />
-      <ShortLet />
-      <InvestmentLandscape />
-      <Maximize />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path='/' element={<div>
+            <NavBarComp />
+            <HomeBanner />
+            <MultiplyInvestments />
+            <SearchBox />
+            <WorldMap />
+            <AwardWinning />
+            <GroupLisitng />
+            <AffordableCities />
+            <Services />
+            <ShortLet />
+            <InvestmentLandscape />
+            <Maximize />
+            <Footer />
+          </div>}>
+          </Route>
+          <Route path='/about'
+            element={<div>
+              <AboutPage />
+              <Features />
+              <Journey />
+              <Connect />
+              <Team />
+              <PartFireGroup />
+              <FAQ />
+              <Footer />
+            </div>}>
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

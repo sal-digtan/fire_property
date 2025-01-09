@@ -9,7 +9,7 @@ const HeroBanner = () => {
     return (
         <div>
             <Container>
-                <video width="auto" height="auto" autoPlay muted loop className='rounded-5 img-fluid'>
+                <video autoPlay muted loop className='home-videobg img-fluid rounded-5'>
                     <source src={heroBgvideo} type="video/mp4" />
                 </video>
             </Container>

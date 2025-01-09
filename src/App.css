@@ -33,6 +33,39 @@ body {
   padding: 10px;
 }
 
+/* .home-videobg {
+  width: 100%;
+  height: 400px !important;
+  border-radius: 30px !important;
+} */
+
+/* .accordion-button::after {
+  display: none;
+} */
+
+.accordion-button.collapsed::after {
+  background-image: url("./assets/images/addicon.svg") top center no-repeat;
+}
+
+.accordion-button.collapsed::after {
+  filter: invert(100%) sepia(0%) saturate(6648%) hue-rotate(157deg) brightness(90%) contrast(110%) !important;
+}
+
+.accordion-button {
+  color: #fff !important;
+}
+
+.accordion-button {
+  background-color: #43495B !important;
+  border-radius: 44px !important;
+}
+
+.connectbg {
+  background: url('./assets/images/cta-bg.png') no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+}
+
 @media (max-width:600px) {
   .arrow-fix {
     position: absolute;
