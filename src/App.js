@@ -24,6 +24,7 @@ import FAQ from './components/FAQ';
 import ShortLetPage from './components/ShortLetPage';
 import SuccesStory from './components/SuccesStory';
 import ShortGlobal from './components/ShortGlobal';
+import ContactPage from './components/ContactPage';
 
 function App() {
 
@@ -67,6 +68,14 @@ function App() {
               <ShortGlobal />
               <Footer />
             </div>}>
+          </Route>
+          <Route path='/contact'
+            element={<div>
+              <NavBarComp />
+              <ContactPage />
+              <Footer />
+            </div>}>
+
           </Route>
         </Routes>
       </Router>
