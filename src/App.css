@@ -66,6 +66,44 @@ body {
   height: 100vh;
 }
 
+.custom-borders::before {
+  content: '';
+  right: 0;
+  border-left: 0.5px solid #43495B;
+  position: absolute;
+  top: 0%;
+  bottom: 14%;
+}
+
+.custom-borders::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: 0.5px;
+  background-color: #43495B;
+
+}
+
+.bgimg {
+  background: url("./assets/images/propertyexperience.png") center center no-repeat;
+  background-size: contain;
+  height: 100vh;
+}
+
+.bgrefer {
+  background: url("./assets/images/BG.png") center center no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.bldgbg {
+  background: url("./assets/images/Building.png") top center no-repeat;
+  background-size: cover;
+  height: 75vh;
+}
+
 @media (max-width:600px) {
   .arrow-fix {
     position: absolute;

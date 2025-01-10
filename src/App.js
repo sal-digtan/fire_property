@@ -21,6 +21,7 @@ import Connect from './components/Connect';
 import Team from './components/Team';
 import PartFireGroup from './components/PartFireGroup';
 import FAQ from './components/FAQ';
+import ShortLetPage from './components/ShortLetPage';
 
 function App() {
 
@@ -55,6 +56,8 @@ function App() {
               <FAQ />
               <Footer />
             </div>}>
+          </Route>
+          <Route path='/short-let' element={<div><NavBarComp /><ShortLetPage /></div>}>
           </Route>
         </Routes>
       </Router>
