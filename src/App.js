@@ -22,6 +22,8 @@ import Team from './components/Team';
 import PartFireGroup from './components/PartFireGroup';
 import FAQ from './components/FAQ';
 import ShortLetPage from './components/ShortLetPage';
+import SuccesStory from './components/SuccesStory';
+import ShortGlobal from './components/ShortGlobal';
 
 function App() {
 
@@ -57,7 +59,14 @@ function App() {
               <Footer />
             </div>}>
           </Route>
-          <Route path='/short-let' element={<div><NavBarComp /><ShortLetPage /></div>}>
+          <Route path='/short-let'
+            element={<div>
+              <NavBarComp />
+              <ShortLetPage />
+              <SuccesStory />
+              <ShortGlobal />
+              <Footer />
+            </div>}>
           </Route>
         </Routes>
       </Router>

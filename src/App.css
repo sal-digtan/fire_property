@@ -104,6 +104,12 @@ body {
   height: 75vh;
 }
 
+.globalbg {
+  background: url("./assets/images/shortletBG.png") top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
 @media (max-width:600px) {
   .arrow-fix {
     position: absolute;

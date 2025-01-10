@@ -20,7 +20,7 @@ import building from '../assets/images/Building.png'
 const ShortLetPage = () => {
     return (
         <Container className='py-lg-5 m-0 p-0' fluid>
-            <Row>
+            <Row className='px-5'>
                 <Col>
                     <div className='text-center'>
                         <h2>Short-let as part of your
@@ -169,7 +169,7 @@ const ShortLetPage = () => {
             <Container>
                 <Row className='bgrefer p-5 align-items-center'>
                     <Col className='bldgbg'>
-                        
+
                     </Col>
                     <Col>
                         <div className='text-white'>
