@@ -110,6 +110,14 @@ body {
   height: 100vh;
 }
 
+.slick-slide>div {
+  margin: 0 5px;
+}
+
+.slick-list {
+  margin: 0 -5px;
+}
+
 @media (max-width:600px) {
   .arrow-fix {
     position: absolute;

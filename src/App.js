@@ -25,6 +25,7 @@ import ShortLetPage from './components/ShortLetPage';
 import SuccesStory from './components/SuccesStory';
 import ShortGlobal from './components/ShortGlobal';
 import ContactPage from './components/ContactPage';
+import ListingPage from './components/ListingPage';
 
 function App() {
 
@@ -75,7 +76,13 @@ function App() {
               <ContactPage />
               <Footer />
             </div>}>
-
+          </Route>
+          <Route path='/listing'
+            element={<div>
+              <NavBarComp />
+              <ListingPage />
+              <Footer />
+            </div>}>
           </Route>
         </Routes>
       </Router>
