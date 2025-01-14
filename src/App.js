@@ -26,6 +26,7 @@ import SuccesStory from './components/SuccesStory';
 import ShortGlobal from './components/ShortGlobal';
 import ContactPage from './components/ContactPage';
 import ListingPage from './components/ListingPage';
+import ListingDetailsPage from './components/ListingDetailsPage';
 
 function App() {
 
@@ -81,6 +82,13 @@ function App() {
             element={<div>
               <NavBarComp />
               <ListingPage />
+              <Footer />
+            </div>}>
+          </Route>
+          <Route path='/listing-details'
+            element={<div>
+              <NavBarComp />
+              <ListingDetailsPage />
               <Footer />
             </div>}>
           </Route>
