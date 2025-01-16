@@ -11,7 +11,7 @@ import footIcon3 from '../assets/images/ftricon3.svg'
 const Footer = () => {
     return (
         <div>
-            <Container>
+            <Container fluid className='px-5'>
                 <Row style={{ backgroundColor: "#070A0F" }} className='p-5 rounded-3 align-items-center'>
                     <Col lg={2}>
                         <Image src={logo} fluid />

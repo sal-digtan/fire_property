@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBarComp from './components/NavBarComp';
 import HomeBanner from './components/HeroBanner'
@@ -27,6 +26,9 @@ import ShortGlobal from './components/ShortGlobal';
 import ContactPage from './components/ContactPage';
 import ListingPage from './components/ListingPage';
 import ListingDetailsPage from './components/ListingDetailsPage';
+import PreviewPage from './components/PreviewPage';
+import CheckoutPage from './components/CheckoutPage';
+import DashboardPage from './components/DashboardPage';
 
 function App() {
 
@@ -89,6 +91,27 @@ function App() {
             element={<div>
               <NavBarComp />
               <ListingDetailsPage />
+              <Footer />
+            </div>}>
+          </Route>
+          <Route path='/preview'
+            element={<div>
+              <NavBarComp />
+              <PreviewPage />
+              <Footer />
+            </div>}>
+          </Route>
+          <Route path='/checkout'
+            element={<div>
+              <NavBarComp />
+              <CheckoutPage />
+              <Footer />
+            </div>}>
+          </Route>
+          <Route path='/dashboard'
+            element={<div>
+              <NavBarComp />
+              <DashboardPage />
               <Footer />
             </div>}>
           </Route>
