@@ -23,6 +23,9 @@ import listingSliderImg2 from '../assets/images/wishTabImg2.png'
 import listingSliderImg3 from '../assets/images/wishTabImg3.png'
 import listingSliderImg4 from '../assets/images/wishTabImg4.png'
 import reserveThumb from '../assets/images/reserveImg.png'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import chatIcon from '../assets/images/chatIcon.png'
 
 const DashboardPage = () => {
 
@@ -30,6 +33,13 @@ const DashboardPage = () => {
     const [nonEditMode, setNonEditMode] = useState(true)
     const [editedNameValue, setEditedNameValue] = useState("Muhammad Saad")
     const [editedPhoneValue, setEditedPhoneValue] = useState("+1 234 567 8901")
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const [lgShow, setLgShow] = useState(false);
+    const handlelgShow = () => setLgShow(true)
 
     return (
         <Container className='py-lg-5 px-4' fluid>
@@ -282,9 +292,6 @@ const DashboardPage = () => {
                                                 <div>
                                                     <p>Total Guests</p>
                                                 </div>
-                                                <div>
-                                                    <p>Action</p>
-                                                </div>
                                             </div>
                                         </Col>
                                         <Col lg={12}>
@@ -306,9 +313,6 @@ const DashboardPage = () => {
                                                 </div>
                                                 <div>
                                                     <p>5</p>
-                                                </div>
-                                                <div>
-                                                    <Image src={editIcon} fluid />
                                                 </div>
                                             </div>
                                         </Col>
@@ -332,9 +336,6 @@ const DashboardPage = () => {
                                                 <div>
                                                     <p>Total Guests</p>
                                                 </div>
-                                                <div>
-                                                    <p>Action</p>
-                                                </div>
                                             </div>
                                         </Col>
                                         <Col lg={12}>
@@ -356,9 +357,6 @@ const DashboardPage = () => {
                                                 </div>
                                                 <div>
                                                     <p>5</p>
-                                                </div>
-                                                <div>
-                                                    <Image src={editIcon} fluid />
                                                 </div>
                                             </div>
                                         </Col>
@@ -380,9 +378,6 @@ const DashboardPage = () => {
                                                 <div>
                                                     <p>Total Guests</p>
                                                 </div>
-                                                <div>
-                                                    <p>Action</p>
-                                                </div>
                                             </div>
                                         </Col>
                                         <Col lg={12}>
@@ -404,9 +399,6 @@ const DashboardPage = () => {
                                                 </div>
                                                 <div>
                                                     <p>5</p>
-                                                </div>
-                                                <div>
-                                                    <Image src={editIcon} fluid />
                                                 </div>
                                             </div>
                                         </Col>
@@ -428,9 +420,6 @@ const DashboardPage = () => {
                                                 <div>
                                                     <p>Total Guests</p>
                                                 </div>
-                                                <div>
-                                                    <p>Action</p>
-                                                </div>
                                             </div>
                                         </Col>
                                         <Col lg={12}>
@@ -452,15 +441,139 @@ const DashboardPage = () => {
                                                 </div>
                                                 <div>
                                                     <p>5</p>
-                                                </div>
-                                                <div>
-                                                    <Image src={editIcon} fluid />
                                                 </div>
                                             </div>
                                         </Col>
                                     </TabPanel>
                                 </Row>
                             </Tabs>
+                        </TabPanel>
+                        <TabPanel>
+                            <Card className='p-3 shadow border-0'>
+                                <div className='border-bottom border-secondary'>
+                                    <h2>
+                                        24/7 Support
+                                    </h2>
+                                </div>
+                                <Form className='pt-3'>
+                                    <Row>
+                                        <Col lg={6}>
+                                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                                <Form.Label>Full Name</Form.Label>
+                                                <Form.Control type="text" placeholder="Enter your name" className='border-0 border-bottom border-secondary rounded-0' />
+                                            </Form.Group>
+                                        </Col>
+                                        <Col lg={6}>
+                                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                                <Form.Label>Email address</Form.Label>
+                                                <Form.Control type="email" placeholder="name@example.com" className='border-0 border-bottom border-secondary rounded-0' />
+                                            </Form.Group>
+                                        </Col>
+                                        <Col lg={12}>
+                                            <Form.Label>Subject</Form.Label>
+                                            <Form.Select aria-label="Default select example" className='mb-3 border-0 border-bottom border-secondary rounded-0'>
+                                                <option>Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </Form.Select>
+                                        </Col>
+                                        <Col lg={12}>
+                                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                                <Form.Label>Message</Form.Label>
+                                                <Form.Control as="textarea" rows={3} placeholder='Your Message...' className='border-0 border-bottom border-secondary rounded-0' />
+                                            </Form.Group>
+                                        </Col>
+                                        <Col lg={12}>
+                                            <Button variant="warning"
+                                                className='w-100 rounded-5 fw-bold'
+                                                style={{
+                                                    background: "linear-gradient(91.03deg, #FFD03F -9.72%, #FCC939 12.77%, #F5B82A 42.01%, #EA9C12 76.88%, #E58E06 91.5%, #DF8800 102.75%)"
+                                                }}
+                                                onClick={handlelgShow}
+                                            >
+                                                Submit
+                                            </Button>
+                                        </Col>
+                                        {/* modal code */}
+                                        <Modal show={lgShow} onHide={handleClose} size="lg"
+                                        >
+                                            <Modal.Header closeButton>
+                                                <Modal.Title>Book a consultation now!</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                                <Form>
+                                                    <Row>
+                                                        <Col lg={4}>
+                                                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                                                <Form.Label>Email address</Form.Label>
+                                                                <Form.Control type="email" placeholder="name@example.com" className='border-0 border-secondary border-bottom rounded-0' />
+                                                            </Form.Group>
+                                                        </Col>
+                                                        <Col lg={4}>
+                                                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                                                <Form.Label>Email address</Form.Label>
+                                                                <Form.Control type="email" placeholder="name@example.com" className='border-0 border-secondary border-bottom rounded-0' />
+                                                            </Form.Group>
+                                                        </Col>
+                                                        <Col lg={4}>
+                                                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                                                <Form.Label>Email address</Form.Label>
+                                                                <Form.Control type="email" placeholder="name@example.com" className='border-0 border-secondary border-bottom rounded-0' />
+                                                            </Form.Group>
+                                                        </Col>
+                                                        <Col lg={12} className='border-bottom border-secondary'>
+                                                            <div className='d-flex justify-content-between'>
+                                                                <Form.Label className='fw-bold text-capitalize'>Do you have a property?</Form.Label>
+                                                                <div>
+                                                                    <Form.Check
+                                                                        inline
+                                                                        label="Yes"
+                                                                        name="group1"
+                                                                        type="radio"
+                                                                    />
+                                                                    <Form.Check
+                                                                        inline
+                                                                        label="No"
+                                                                        name="group1"
+                                                                        type="radio"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </Col>
+                                                        <Col lg={6} className='pt-3'>
+                                                            <div className='d-flex align-items-center'>
+                                                                <Image src={bedIcon} fluid />
+                                                                <Form.Select aria-label="Default select example" className='mb-3 border-0 border-bottom border-secondary rounded-0'>
+                                                                    <option>Open this select menu</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </Form.Select>
+                                                            </div>
+                                                        </Col>
+                                                        <Col lg={6}>
+                                                            <div className='d-flex align-items-center pt-3'>
+                                                                <Image src={chatIcon} fluid />
+                                                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                                                    <Form.Control type="email" placeholder="name@example.com" className='border-0 border-secondary border-bottom rounded-0' />
+                                                                </Form.Group>
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                                                </Form>
+                                                <div className='text-center border-bottom border-secondary mb-3 pt-3'>
+                                                    <p>* By submitting this form, you agree to our terms and conditions and consent to the processing of your personal data in accordance with our privacy policy.</p>
+                                                </div>
+                                                <div className='pt-4'>
+                                                    <Button variant='warning' className='w-100 fw-bold rounded-5'>Book!</Button>
+                                                </div>
+                                            </Modal.Body>
+                                        </Modal>
+                                        {/* modal code */}
+                                    </Row>
+                                </Form>
+                            </Card>
                         </TabPanel>
                     </Tabs>
                 </Col>
