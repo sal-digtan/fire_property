@@ -34,9 +34,11 @@ const NavBarComp = () => {
                         <Nav.Link href="#listing">Listing</Nav.Link>
                     </Nav>
                     <Nav className="me-auto ms-auto text-center">
-                        <Navbar.Brand href="#home">
-                            <Image src={logo} fluid />
-                        </Navbar.Brand>
+                        <Link to={'/'}>
+                            <Navbar.Brand href="#home">
+                                <Image src={logo} fluid />
+                            </Navbar.Brand>
+                        </Link>
                     </Nav>
                     <Nav className='d-flex align-items-center me-auto ms-auto flex-row'>
                         {pathname === "/dashboard" ?
