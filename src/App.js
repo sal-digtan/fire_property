@@ -29,6 +29,9 @@ import ListingDetailsPage from './components/ListingDetailsPage';
 import PreviewPage from './components/PreviewPage';
 import CheckoutPage from './components/CheckoutPage';
 import DashboardPage from './components/DashboardPage';
+import LoginPage from './components/LoginPage';
+import SignupPage from './components/SignupPage';
+import ForgotPasswordPage from './components/ForgotPasswordPage';
 
 function App() {
 
@@ -113,6 +116,21 @@ function App() {
               <NavBarComp />
               <DashboardPage />
               <Footer />
+            </div>}>
+          </Route>
+          <Route path='/login'
+            element={<div>
+              <LoginPage />
+            </div>}>
+          </Route>
+          <Route path='/signup'
+            element={<div>
+              <SignupPage />
+            </div>}>
+          </Route>
+          <Route path='/forgotpassword'
+            element={<div>
+              <ForgotPasswordPage />
             </div>}>
           </Route>
         </Routes>

@@ -9,6 +9,9 @@ import hamburgerIcon from '../assets/images/hamburgericon.svg'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link, useLocation } from 'react-router-dom'
+import profileIcon from '../assets/images/userprofileIcon.png'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 const NavBarComp = () => {
 
@@ -16,7 +19,7 @@ const NavBarComp = () => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const { pathname } = useLocation();
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -36,11 +39,33 @@ const NavBarComp = () => {
                         </Navbar.Brand>
                     </Nav>
                     <Nav className='d-flex align-items-center me-auto ms-auto flex-row'>
-                        <BsPersonCircle className='me-2' />
-                        <a href="http://" target="_blank" rel="noopener noreferrer" className='text-black'>Sign in</a>
-                        <span className='px-2'>or</span>
-                        <a href="http://" target="_blank" rel="noopener noreferrer" className='text-black'>Create account</a>
-                        <a href="#" className='ps-4' onClick={handleShow} ><Image src={hamburgerIcon} fluid /></a>
+                        {pathname === "/dashboard" ?
+                            <div className='d-flex align-items-center'>
+                                <Image src={profileIcon} fluid />
+                                <NavDropdown title="James Smith" id="basic-nav-dropdown">
+                                    <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">
+                                        Settings
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.4">
+                                        Other Settings
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                                <a href="#" className='ps-4' onClick={handleShow} ><Image src={hamburgerIcon} fluid /></a>
+                            </div>
+                            :
+                            <div>
+                                <BsPersonCircle className='me-2' />
+                                <Link to={'/login'}>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer" className='text-black'>Sign in</a>
+                                </Link>
+                                <span className='px-2'>or</span>
+                                <Link to={'/signup'}>
+                                    <a href="http://" target="_blank" rel="noopener noreferrer" className='text-black'>Create account</a>
+                                </Link>
+                                <a href="#" className='ps-4' onClick={handleShow} ><Image src={hamburgerIcon} fluid /></a>
+                            </div>
+                        }
                         {/* offcanvas */}
                         <Offcanvas show={show} onHide={handleClose} placement='top'>
                             <Offcanvas.Body>

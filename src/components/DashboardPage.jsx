@@ -26,6 +26,7 @@ import reserveThumb from '../assets/images/reserveImg.png'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import chatIcon from '../assets/images/chatIcon.png'
+import { Link } from 'react-router-dom'
 
 const DashboardPage = () => {
 
@@ -92,10 +93,12 @@ const DashboardPage = () => {
                                 <Tab>
                                     <Nav.Item className='text-center' style={{ width: "200px" }}>
                                         <Nav.Link eventKey="link-5" className='rounded-5' style={{ background: "linear-gradient(91.03deg, #FFD03F -9.72%, #FCC939 12.77%, #F5B82A 42.01%, #EA9C12 76.88%, #E58E06 91.5%, #DF8800 102.75%)" }}>
-                                            <div>
-                                                <Image src={logoutIcon} fluid className='pe-2' />
-                                                Logout
-                                            </div>
+                                            <Link to={'/login'}>
+                                                <div>
+                                                    <Image src={logoutIcon} fluid className='pe-2' />
+                                                    Logout
+                                                </div>
+                                            </Link>
                                         </Nav.Link>
                                     </Nav.Item>
                                 </Tab>

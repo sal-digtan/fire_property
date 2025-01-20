@@ -161,6 +161,17 @@ body {
   background: transparent;
 }
 
+.loginbg {
+  background: url("./assets/images/loginBG.png") top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.signupbg {
+  background: url("./assets/images/loginBG.png") top center no-repeat;
+  background-size: cover;
+}
+
 @media (max-width:600px) {
   .arrow-fix {
     position: absolute;
