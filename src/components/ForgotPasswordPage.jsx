@@ -7,9 +7,8 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import mailIcon from '../assets/images/mailIcon.png'
-import eyeIcon from '../assets/images/eyeIcon.png'
-import logo from '../assets/images/Logo.png'
 import backArrow from '../assets/images/backArrow.png'
+import { Link } from 'react-router-dom'
 
 const ForgotPasswordPage = () => {
     return (
@@ -17,9 +16,11 @@ const ForgotPasswordPage = () => {
             <Row>
                 <Col>
                     <div className='position-absolute top-0 start-0 p-4'>
-                        <Button variant='light' className='rounded-circle' style={{ width: "54px", height: "54px" }}>
-                            <Image src={backArrow} fluid />
-                        </Button>
+                        <Link to={'/'}>
+                            <Button variant='light' className='rounded-circle' style={{ width: "54px", height: "54px" }}>
+                                <Image src={backArrow} fluid />
+                            </Button>
+                        </Link>
                     </div>
                     <Card style={{
                         width: '500px', border: '1.5px solid #fff',
@@ -27,7 +28,7 @@ const ForgotPasswordPage = () => {
                         backdropFilter: "blur(8px)",
                         borderRadius: "16px"
                     }}
-                        className='bg-transparent'
+                        className='bg-transparent width-fix'
                     >
                         <Card.Body>
                             <Card.Title className='text-center pb-3'>

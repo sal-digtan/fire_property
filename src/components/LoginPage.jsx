@@ -30,7 +30,7 @@ const LoginPage = () => {
                         backdropFilter: "blur(8px)",
                         borderRadius: "16px"
                     }}
-                        className='bg-transparent'
+                        className='bg-transparent width-fix'
                     >
                         <Card.Body>
                             <Card.Title className='text-center pb-3'>

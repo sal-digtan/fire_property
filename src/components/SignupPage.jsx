@@ -40,7 +40,7 @@ const SignupPage = () => {
                         backdropFilter: "blur(8px)",
                         borderRadius: "16px"
                     }}
-                        className='bg-transparent my-lg-5'
+                        className='bg-transparent my-lg-5 width-fix'
                     >
                         <Card.Body>
                             <Card.Title className='text-center pb-3'>
